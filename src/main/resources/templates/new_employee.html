@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employe Manager</title>
+</head>
+<body>
+
+<div class="container">
+		<h1>Employee Management System</h1>
+		<hr>
+		<h2>Save Employee</h2>
+
+<form  action="#" th:action="@{/saveEmployee}" method="post" th:object="${employe}">
+
+ <div class="form-group">
+    <input type="text" th:field="*{name}"
+				placeholder="Employee name" class="form-control mb-4 col-4">
+  </div>
+ <div class="form-group">
+    <input type="text" th:field="*{email}"
+				placeholder="Employee Email" class="form-control mb-4 col-4">
+  </div>
+  <div class="form-group">
+    <input type="text" th:field="*{age}"
+				placeholder="Employee age" class="form-control mb-4 col-4">
+  </div>
+ 
+ 
+  <button type="submit" class="btn btn-info col-2"> Save Employee</button>
+</form>
+
+</div>
+
+
+</body>
+</html>
